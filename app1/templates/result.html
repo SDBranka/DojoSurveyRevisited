@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dojo Survey Revisited Result</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Submitted Info</h1>
+            <p>Name: <span id="nameVal">{{request.session.name}}</span></p>
+            <p>Dojo Location: <span id="locVal">{{request.session.location}}</span></p>
+            <p>Favorite Language: <span id="langVal">{{request.session.favLang}}</span></p>
+            <p>Preffered Travel: <span id="travVal">{{request.session.travel}}</span></p>
+            <p>Favorite Music: <span id="musVal">{{request.session.music}}</span></p>
+            <div id="comBlock">
+                <p>Comment: </p>
+                <span id="comVal">{{request.session.comment}}</span>
+            </div>
+            <button id="btn"><a href="/">Go Back</a></button>
+        </div> <!--end wrapper-->
+    </body>
+</html>
+
